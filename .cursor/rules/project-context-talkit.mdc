@@ -1,0 +1,22 @@
+---
+description: Core project identity and product context for TalkIt
+alwaysApply: true
+---
+
+# TalkIt Project Context
+
+- This project is **TalkIt**.
+- Do not refer to this project as WASI.
+- If older notes mention WASI, treat them as outdated context and prioritize TalkIt.
+
+## Product Scope (current)
+
+- Android app focused on question-based social gameplay.
+- Core loop includes showing questions, swiping/advancing, and tracking used questions.
+- The reset action can exist during development but is expected to be removed from production UX later.
+
+## Guidance for Future Work
+
+- Keep architecture scalable and modular from early stages.
+- Prioritize maintainability, sync-readiness, and mobile performance.
+- Prefer incremental deliveries with clear phases and acceptance criteria.
