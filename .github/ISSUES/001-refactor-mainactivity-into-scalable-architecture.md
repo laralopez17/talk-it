@@ -10,12 +10,12 @@ about: Split the monolithic screen into modular layers and feature boundaries.
 
 ## 🧱 Tasks
 
-- [ ] Create `features/game/presentation` package for UI screens and state rendering.
-- [ ] Create `core/domain` package for game entities and business rules.
-- [ ] Create `data` package for local persistence and question sources.
-- [ ] Move question loading and used-question persistence out of composables.
-- [ ] Keep current gameplay behavior unchanged during refactor.
-- [ ] Keep reset behavior available for development.
+- [x] Create `features/game/presentation` package for UI screens and state rendering.
+- [x] Create `core/domain` package for game entities and business rules.
+- [x] Create `data` package for local persistence and question sources.
+- [x] Move question loading and used-question persistence out of composables.
+- [x] Keep current gameplay behavior unchanged during refactor.
+- [x] Keep reset behavior available for development.
 
 ## Possible Implementation
 
@@ -29,9 +29,15 @@ about: Split the monolithic screen into modular layers and feature boundaries.
 
 ## 🧪 Acceptance Criteria
 
-- [ ] `MainActivity.kt` no longer contains game business logic or persistence logic.
-- [ ] App behavior remains equivalent to current swipe + reset MVP.
-- [ ] Project follows a modular folder structure that supports adding new features without central file growth.
+- [x] `MainActivity.kt` no longer contains game business logic or persistence logic.
+- [x] App behavior remains equivalent to current swipe + reset MVP.
+- [x] Project follows a modular folder structure that supports adding new features without central file growth.
+
+## ✅ Implementation Notes
+
+- `MainActivity.kt` is now a thin entry point that wires `GameViewModel` and `GameScreen`.
+- Question model, repository port, use cases, and local adapter were split into domain/application/data layers.
+- Game UI moved to feature presentation package with dedicated state and screen files.
 
 ## 🗺️ Future (out of scope for this issue)
 
